@@ -31,7 +31,15 @@ set(cpu_PARAMS
 )
 
 # Sources
-set(sources_SRCS)
+set(sources_SRCS
+    ${CMAKE_CURRENT_SOURCE_DIR}/Src/system_stm32l4xx.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/Src/sysclk.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/Src/gpio.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/Src/delay.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/Src/uart.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/Src/tone.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/Src/apa106.c
+)
 
 # Include directories for all compilers
 set(include_DIRS)
