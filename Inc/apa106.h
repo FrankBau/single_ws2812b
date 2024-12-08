@@ -9,5 +9,4 @@ void setRGB(uint8_t led, uint8_t r, uint8_t g, uint8_t b);
 
 void setRGBraw(uint8_t led, uint8_t r, uint8_t g, uint8_t b);
 
-
 #endif

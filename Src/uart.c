@@ -27,7 +27,7 @@ void uart_init(void)
 
     uint32_t baud_rate = 115200UL;
     // USART1SEL  is assumed to be at reset default 00: PCLK selected as USART1 clock
-    USART2->BRR = SystemCoreClock / baud_rate;                // USARTDIV in ref.man. 38.5.4 USART baud rate generation
+    USART2->BRR = (SystemCoreClock + (baud_rate/2)) / baud_rate; // ref.man. 38.5.4 USART baud rate generation
     USART2->CR1 = USART_CR1_UE | USART_CR1_RE | USART_CR1_TE; // enable UART, RX, TX
 }
 

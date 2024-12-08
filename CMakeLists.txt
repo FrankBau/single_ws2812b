@@ -38,6 +38,7 @@ set(sources_SRCS
     ${CMAKE_CURRENT_SOURCE_DIR}/Src/delay.c
     ${CMAKE_CURRENT_SOURCE_DIR}/Src/uart.c
     ${CMAKE_CURRENT_SOURCE_DIR}/Src/tone.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/Src/adc.c
     ${CMAKE_CURRENT_SOURCE_DIR}/Src/apa106.c
 )
 

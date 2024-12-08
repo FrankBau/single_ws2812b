@@ -6,9 +6,9 @@
 
 #define LEDS    256
 
-// implementation with a 16 MHz SYSCLK
-#define T0H 350 * 16 / 1000
-#define T1H 1360 * 16 / 1000
+// needs 16 MHz or better SYSCLK
+#define T0H     ( 350UL * (SystemCoreClock/1000000UL) / 1000UL)
+#define T1H     (1360UL * (SystemCoreClock/1000000UL) / 1000UL)
 #define PERIOD (T0H + T1H)
 
 static uint16_t bits[24 * LEDS + 200]; // array of PWM encoded 'bits' which will be sent to the LED by timer triggered DMA transfer
